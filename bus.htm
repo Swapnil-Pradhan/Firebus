@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Bus Wallah</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="buswalla.css">
+    <script src="jQuery.js"></script>
+    <script src="instascan.js"></script>
+</head>
+
+<body bgcolor="black" style="background-image: url('bbg.svg'); overflow-y: scroll;"
+    onload="check(JSON.parse(localStorage.getItem('dta')))">
+
+    <section class="scanner">
+        <video>Update browser :o</video>
+    </section>
+<br><br>
+    <center><header id="bus">Bus No. </header></center>
+    <center>
+        <fieldset>
+            <legend>No. o' Children picked: <b></b></legend>
+            <h4>NAME</h4>
+            <h4>CLASS</h4>
+        </fieldset>
+
+        <fieldset style="display: none; padding: 1ch;">
+            No. o' children dropped: <i>0</i>
+        </fieldset>
+
+        <fieldset>
+            <legend>No. o' Children remaining: <b></b></legend>
+            <h4>NAME</h4>
+            <h4>CLASS</h4>
+        </fieldset>
+
+        <fieldset style="padding:1ch;">
+            No. o' children in bus: <i>0</i>
+        </fieldset>
+    </center>
+
+    <div id="btns">
+        <font size="6"><sub class="icon">qr_code_scanner</sub> Scan</font>
+        <font size="6" style="margin-left: 1ch; display: none;"><sub class="icon">sensor_door</sub> All out</font>
+    </div>
+    <script src="Firebase8.js"></script>
+    <script src="common.js"></script>
+    <script src="buswalla.js"></script>
+</body>
+
+</html>

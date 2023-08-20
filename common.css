@@ -1,0 +1,50 @@
+body {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: product;
+    color: white;
+    overflow: hidden;
+}
+
+* {
+    transition: .5s;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1.2);
+}
+
+.icon {
+    font-family: icon;
+    font-size: larger;
+    color: rgb(228, 178, 247);
+}
+
+@font-face {
+    font-family: product;
+    src: url("product.ttf");
+}
+
+@font-face {
+    font-family: icon;
+    src: url("Icons.woff2");
+}
+
+header {
+    font-size: xx-large;
+    background: rgba(0, 0, 0, .8);
+    top: 0;
+    width: 100vw; 
+    z-index: 1;
+    backdrop-filter: blur(9px);
+    left: 0;
+    position: absolute;
+}
+
+a{
+    color: lightblue;
+    text-decoration: none;
+    text-align: left;
+}

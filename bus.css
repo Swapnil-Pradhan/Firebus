@@ -1,0 +1,164 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("bg.svg");
+}
+
+section {
+    display: grid;
+    background-color: rgb(59, 45, 46, .7);
+    border-radius: 34px;
+    padding: 3ch;
+    backdrop-filter: blur(9px);
+    border: 1px solid rgb(256, 256, 256, .5);
+    position: absolute;
+}
+
+.inv{
+    scale: 1.5;
+    opacity: 0;
+    z-index: 0;
+}
+
+.prnt, .teach, .cond{
+    scale: 0;
+    z-index: 1;
+}
+
+fieldset {
+    border-radius: 34px;
+    border: 0 solid transparent;
+    background-color: rgba(0, 0, 0, .5);
+    font-size: 125%;
+}
+
+fieldset * {
+    margin: .2ch;
+}
+
+input {
+    border: 0;
+    border-radius: 69px;
+    padding: 1ch;
+    background-color: rgba(256, 256, 256, .1);
+    font-family: product;
+    font-size: 75%;
+    color: white;
+    margin-top: .5ch;
+}
+
+input[type=submit]{
+width: fit-content;
+font-weight: bold;
+background-color: rgb(247, 216, 169);
+color: rgb(53, 46, 36);
+cursor: pointer;
+
+}
+
+input[type=submit]:active{
+    scale: .9;
+}
+
+input:focus:not(input[type="submit"]) {
+    border-bottom: 3px solid rgb(192, 225, 252);
+    outline: none;
+    border-radius: 18px 18px 0 0;
+}
+
+.grecaptcha-badge{
+    display: none !important;
+}
+
+fieldset:nth-child(2) {
+    margin-top: 1vh;
+}
+
+.openf {
+    border: 3px solid snow;
+}
+
+.openl {
+    background-color: transparent;
+    width: 6ch;
+    text-align: left;
+}
+
+.openfo {
+    height: 31ch;
+    overflow: auto;
+}
+
+legend {
+    border-radius: 69px;
+    background-color: rgb(59, 45, 46);
+    padding: 1ch;
+    color: snow;
+    width: 100%;
+    margin-left: -5%;
+}
+
+legend:active {
+    scale: .8;
+}
+
+form {
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+label {
+    color: rgb(245, 216, 155);
+}
+
+select {
+    background-color: rgba(256, 256, 256, .1);
+    color: snow;
+    padding: .5ch;
+    width: 12ch;
+    font-size: 75%;
+    border-radius: 69px;
+    cursor: pointer;
+}
+
+section>b {
+    text-align: center;
+    margin: 1ch;
+    background-color: rgb(59, 45, 46);
+    border-radius: 34px;
+}
+
+section>b:active {
+    scale: .8;
+}
+
+#qrdt{
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.qrdto{
+    scale: 1;
+    height: 300px !important;
+}
+
+h1 {
+    margin: 1ch 3ch 1ch 3ch;
+}
+
+.open {
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}

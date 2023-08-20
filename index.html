@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="bus.css">
+    <title>Feubus</title>
+</head>
+
+<body bgcolor="black">
+    <section class="prnt">
+        <fieldset id="pr" onclick="reg(this.id)">
+            <legend id="lr">Sign Up</legend>
+            <form autocomplete="on" id="or" onsubmit="return false">
+
+                <input type="text" name="name" placeholder="Student's name" pattern="^[A-Z][a-z]*(\s+[A-Z][a-z]*){1,}$"
+                    required>
+                <input type="number" name="roll" placeholder="Roll No." min="1" max="50" step="1">
+                <input type="number" name="adm" placeholder="Adm No." min="10000" max="99999" step="1" required>
+                <input type="tel" name="phone" placeholder="Phone No." pattern="\+91[0-9]{10}" id="ppa" required>
+                <br>
+                <span><label for="grade">Class:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+
+                    <select name="grade">
+                        <optgroup label="Pre-primary">
+                            <option value="Nursery">Nursery</option>
+                            <option value="LKG">LKG</option>
+                            <option value="UKG">UKG</option>
+                        </optgroup>
+                        <optgroup label="Primary">
+                            <option value="1">1st</option>
+                            <option value="2">2nd</option>
+                            <option value="3">3rd</option>
+                            <option value="4">4th</option>
+                            <option value="5">5th</option>
+                        </optgroup>
+                        <optgroup label="Middle">
+                            <option value="6">6th</option>
+                            <option value="7">7th</option>
+                            <option value="8">8th</option>
+                        </optgroup>
+                        <optgroup label="Secondary">
+                            <option value="9">9th</option>
+                            <option value="10">10th</option>
+                        </optgroup>
+                        <optgroup label="Higher secondary">
+                            <option value="11">11th</option>
+                            <option value="12">12th</option>
+                        </optgroup>
+                    </select></span>
+
+                <span><label for="sec">Section: </label>
+                    <select name="sec">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                    </select></span>
+                <span><label for="busno">Bus No:&nbsp;</label>
+                    <select name="busno" id="busno"></select></span>
+                <br>
+                <center><input type="submit" id="ultppa" value="Send code"></center>
+            </form>
+
+            <form id="cod" onsubmit="return false;" dir="rtl">
+                <input type="number" min="0" max="999999" minlength="6" step="1" dir="ltr" id="codin"
+                    placeholder="Enter OTP...">
+                <input type="submit" value="Verify">
+            </form>
+
+            <img id="qrdt" alt="QR Code"></img>
+        </fieldset>
+
+        <fieldset id="pl" onclick="reg(this.id)">
+            <legend id="ll">Sign In</legend>
+            <form id="ol"></form>
+        </fieldset>
+    </section>
+
+    <section class="teach" style="font-size: 2ch;">
+        <form id="tech" action="teacher.htm" onsubmit="localStorage.setItem('class', JSON.stringify(Object.fromEntries(new FormData(this))));">
+            <span><label for="grade">Class:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+
+                <select name="grade">
+                    <optgroup label="Pre-primary">
+                        <option value="Nursery">Nursery</option>
+                        <option value="LKG">LKG</option>
+                        <option value="UKG">UKG</option>
+                    </optgroup>
+                    <optgroup label="Primary">
+                        <option value="1">1st</option>
+                        <option value="2">2nd</option>
+                        <option value="3">3rd</option>
+                        <option value="4">4th</option>
+                        <option value="5">5th</option>
+                    </optgroup>
+                    <optgroup label="Middle">
+                        <option value="6">6th</option>
+                        <option value="7">7th</option>
+                        <option value="8">8th</option>
+                    </optgroup>
+                    <optgroup label="Secondary">
+                        <option value="9">9th</option>
+                        <option value="10">10th</option>
+                    </optgroup>
+                    <optgroup label="Higher secondary">
+                        <option value="11">11th</option>
+                        <option value="12">12th</option>
+                    </optgroup>
+                </select></span>
+                
+            <p><label for="sec">Section: </label>
+                <select name="sec">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                </select></p>
+                <center><input type="submit"></center>
+        </form>
+    </section>
+
+    <section class="cond">
+        <form id="condf" style="font-size: 2ch;" onsubmit="return false;">
+            <span><label for="busno" style="margin-left: .5ch;">Bus No:&nbsp;</label>
+                <select name="buno" id="busno" name="no"></select></span>
+            <input type="password" maxlength="6" placeholder="Password" name="pass" id="ps">
+            <center><input type="submit" style="float: right;"></center>
+        </form>
+    </section>
+
+
+    <section id="alogin">
+        <b id="prnt" onclick="lrg(this.id);">
+            <h1><sub class="icon">supervisor_account</sub> Parents</h1>
+        </b>
+        <b id="teach" onclick="lrg(this.id); document.getElementById('tech').style.height='fit-content'">
+            <h1><sub class="icon">school</sub> Teacher</h1>
+        </b>
+        <b id="cond" onclick="lrg(this.id); document.getElementById('condf').style.height='fit-content'">
+            <h1><sub class="icon">directions_bus</sub> Bus Staff</h1>
+        </b>
+    </section>
+    <script src="Firebase8.js"></script>
+    <script src="common.js"></script>
+    <script src="bus.js"></script>
+</body>
+
+</html>
