@@ -7,13 +7,6 @@ body{
     flex-direction: column;
 }
 
-center{
-    margin-top: 7vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 div{
     display: grid;
     grid-template-columns: 1fr 1fr;
