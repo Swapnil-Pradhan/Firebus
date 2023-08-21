@@ -1,21 +1,14 @@
 body {
-    animation: bc 69s infinite linear;
     background: url("tbg.svg");
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-@keyframes bc {
-    from {
-        background-position: 0 -345px;
-    }
-}
-
 center:nth-child(2) {
     background: linear-gradient(to top, #310000, rgba(49, 0, 0, .3));
     overflow: hidden;
-    margin: 5ch;
+    margin: 1ch;
     border-radius: 34px;
     padding: 2ch;
     width: fit-content;
