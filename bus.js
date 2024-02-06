@@ -99,7 +99,7 @@ function otp(cnf) {
 
 auth.onAuthStateChanged(user => {
     if (user) {
-        window.open("student.htm");
+        location.href = "student.htm";
     }
 });
 
@@ -147,7 +147,7 @@ condf.addEventListener("submit", () => {
     db.collection("Passwords").doc(q.buno).get().then(doc => {
         if (doc.exists && doc.data().pass == Number(q.pass)) {
             localStorage.setItem("dta", JSON.stringify(q));
-            window.open("bus.htm");
+            location.href = "bus.htm";
         } else {
             alert("Wrong password!!");
             ps.value = null;
